@@ -11,6 +11,7 @@
 <body>
     @php
     $comics= config('comics');
+    $items= config('items');
     @endphp
     @include('partials/header')
     <main class="bg-dark">
@@ -52,9 +53,19 @@
             </button>
         </div>
     </div>
-    <div>
-        <x-banner />
+    <section style="background-color: #0282f9;" class="py-4 position-relative z-3">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+            @foreach ($items as $item)
+            <div class="col">
+                <x-banner :item="$item" />
+            </div>
+            @endforeach
+        </div>
     </div>
+    </section>
+
     </main>
+    @include('partials/footer')
 </body>
 </html>
