@@ -1,5 +1,5 @@
 @php
-    $navigation = ['CHARACTERS','COMICS','MOVIES','TV','GAMES','COLLECTIBLES','VIDEOS','FANS','NEWS','SHOP'];
+    $navigation= config('navigation');
 @endphp
 
 <header>

@@ -6,3 +6,18 @@
 .grassetto {
     font-weight: bold;
 }
+
+.style-comic-cover {
+    --bs-aspect-ratio: 133.33%;
+}
+
+/* Effetto transizione fluido */
+.transition-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom della copertina al passaggio del mouse (hover) */
+.card:hover .transition-effect {
+    transform: scale(1.05);
+    cursor: pointer;
+}
