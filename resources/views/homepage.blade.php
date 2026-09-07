@@ -13,7 +13,8 @@
     $comics= config('comics');
     $items= config('items');
     @endphp
-    @include('partials/header')
+@extends('layouts.master')
+    @section('content')
     <main class="bg-dark">
         <div class="w-100" style="max-height: 300px; overflow: hidden;">
         <img src="{{Vite::asset('resources/img/jumbotron.jpg')}}" 
@@ -66,6 +67,7 @@
     </section>
 
     </main>
-    @include('partials/footer')
+    @endsection
+   
 </body>
 </html>
